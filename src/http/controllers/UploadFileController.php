@@ -4,15 +4,15 @@ namespace Mintellity\UploadFile\Http\Controllers;
 
 use App\Http\Controllers\Controller as Controller;
 use Illuminate\Http\Request;
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
+use Mintellity\UploadFile\Http\Requests\UploadFileRequest;
 
 class UploadFileController extends Controller
 {
     /**
-     * @param Request $request
+     * @param UploadFileRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(Request $request)
+    public function store(UploadFileRequest $request)
     {
         $data = $request->all();
         $objectClass = $data['object_type'];
@@ -24,13 +24,15 @@ class UploadFileController extends Controller
     }
 
     /**
-     * @param $mediaid
-     * @return \Illuminate\Http\RedirectResponse
+     * @param string $media_id
+     * @return RedirectResponse
      */
-    public function destroy(Media $media)
+    public function destroy($media_id)
     {
+        $mediaClass = config('media-library.media_model');
+        $media = $mediaClass::find($media_id);
+
         $media->delete();
         return redirect()->back();
     }
 }
-
