@@ -8,12 +8,12 @@ This package can be used to Upload and delete files
 
 Require package in your composer.json:
 ```
-"repositories": [
-  {
-    "url": "https://github.com/mintellity/upload-file.git",
-    "type": "git"
-  }
-],
+  "repositories": {
+    "mintellity/upload-file": {
+      "url": "https://github.com/mintellity/upload-file.git",
+      "type": "git"
+    }
+  },
 ```
 
 

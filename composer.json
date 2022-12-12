@@ -1,27 +1,27 @@
 {
-    "name": "mintellity/upload-file",
-    "description": "This package can be used to Upload Files",
-    "type": "package",
-    "version": "1.0.0",
-    "minimum-stability": "dev",
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Mintellity\\UploadFile\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Eelamayooran Raveendran",
-            "email": "eelamayooran.raveendran@mintellity.com"
-        }
-    ],
-    "require": {},
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Mintellity\\UploadFile\\UploadFileServiceProvider"
-            ]
-        }
+  "name": "mintellity/upload-file",
+  "description": "This package can be used to Upload Files",
+  "type": "package",
+  "version": "1.0.0",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Mintellity\\UploadFile\\": "src/"
     }
+  },
+  "authors": [
+    {
+      "name": "Eelamayooran Raveendran",
+      "email": "eelamayooran.raveendran@mintellity.com"
+    }
+  ],
+  "require": {},
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Mintellity\\UploadFile\\UploadFileServiceProvider"
+      ]
+    }
+  }
 }
