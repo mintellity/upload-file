@@ -31,27 +31,20 @@
                 </th>
             </tr>
             @forelse($object->getMedia('files') as $file)
-                <tr>
-                    <td>@if(!is_null($file))
-                            {{$file->mime_type}}
-                        @endif</td>
-                    <td>@if(!is_null($file))
-                            <label>{{$file->getFullUrl()}}</label>
-                        @endif</td>
-                    <td>@if(!is_null($file))
-                            <a target="_blank" href="{{$file->getFullUrl()}}">Open</a>
-                        @endif</td>
-                    <td>@if(!is_null($file))
-                            {{$file->size / 1000 . ' KB'}}
-                        @endif
-                    </td>
-                    <td>
-                        <a class="btn btn-sm btn-icon btn-light-danger btn-active-light-primary"
-                           href="{{route('uploadFile.destroy', $file)}}" data-remove="tr">
-                            <i class="fas fa-trash"></i>
-                        </a>
-                    </td>
-                </tr>
+                @if(!is_null($file))
+                    <tr>
+                        <td>{{$file->mime_type}}</td>
+                        <td><label>{{$file->getFullUrl()}}</label></td>
+                        <td><a target="_blank" href="{{$file->getFullUrl()}}">Open</a></td>
+                        <td>{{ round($file->size / 1000) }}&nbsp;KB</td>
+                        <td>
+                            <a class="btn btn-sm btn-icon btn-light-danger btn-active-light-primary"
+                               href="{{route('uploadFile.destroy', $file)}}" data-remove="tr">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                @endif
             @empty
                 <tr>
                     <td colspan="4">Keine Anhänge gefunden</td>
