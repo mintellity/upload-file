@@ -35,5 +35,5 @@ php artisan vendor:publish --tag=upload-file-components
 #### bind the upload-file-component to your specific component.
 
 ```
-<x-UploadFileComponent :object="$object" />
+<x-upload-file-component :object="$object" />
 ```

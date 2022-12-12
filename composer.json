@@ -2,7 +2,7 @@
   "name": "mintellity/upload-file",
   "description": "This package can be used to Upload Files",
   "type": "package",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minimum-stability": "dev",
   "license": "MIT",
   "autoload": {
