@@ -2,7 +2,7 @@
   "name": "mintellity/upload-file",
   "description": "This package can be used to Upload Files",
   "type": "package",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "minimum-stability": "dev",
   "license": "MIT",
   "autoload": {
@@ -14,6 +14,10 @@
     {
       "name": "Eelamayooran Raveendran",
       "email": "eelamayooran.raveendran@mintellity.com"
+    },
+    {
+      "name": "Tobias Nagel",
+      "email": "tobias.nagel@mintellity.com"
     }
   ],
   "require": {},
