@@ -37,7 +37,7 @@
                         <td>{{ round($file->size / 1000) }}&nbsp;KB</td>
                         <td>
                             <a class="btn btn-sm btn-icon btn-light-info btn-active-light-primary"
-                               href="{{$file->getFullUrl()}}" data-remove="tr">
+                               href="{{$file->getFullUrl()}}" target="_blank">
                                 <i class="fas fa-eye"></i>
                             </a>
                             <a class="btn btn-sm btn-icon btn-light-danger btn-active-light-primary"
