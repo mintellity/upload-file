@@ -24,7 +24,6 @@
             <tr>
                 <th>Type</th>
                 <th>Path</th>
-                <th>Link</th>
                 <th>Size</th>
                 <th>
                     <div class="pull-right">Aktionen</div>
@@ -34,10 +33,13 @@
                 @if(!is_null($file))
                     <tr>
                         <td>{{$file->mime_type}}</td>
-                        <td><label>{{$file->getFullUrl()}}</label></td>
-                        <td><a target="_blank" href="{{$file->getFullUrl()}}">Open</a></td>
+                        <td>{{preg_replace('/\S*\/storage\/app\/public\//i', '/storage/', $file->getPath())}}</td>
                         <td>{{ round($file->size / 1000) }}&nbsp;KB</td>
                         <td>
+                            <a class="btn btn-sm btn-icon btn-light-info btn-active-light-primary"
+                               href="{{$file->getFullUrl()}}" target="_blank">
+                                <i class="fas fa-eye"></i>
+                            </a>
                             <a class="btn btn-sm btn-icon btn-light-danger btn-active-light-primary"
                                href="{{route('uploadFile.destroy', $file)}}" data-remove="tr">
                                 <i class="fas fa-trash"></i>
