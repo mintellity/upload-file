@@ -6,11 +6,18 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class UploadFileRequest extends FormRequest
 {
+
+    /**
+     * @return bool
+     */
     public function authorize()
     {
         return true;
     }
 
+    /**
+     * @return string[]
+     */
     public function rules()
     {
         return [
