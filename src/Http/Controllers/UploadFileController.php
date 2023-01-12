@@ -17,7 +17,7 @@ class UploadFileController extends Controller
         $data = $request->all();
         $objectClass = $data['object_type'];
         $objectKey = $data['object_id'];
-        $object = $objectClass::find($objectKey);
+        $object = $objectClass::withoutGlobalScopes()->find($objectKey);
 
         $object->addMedia($request->file('file'))->toMediaCollection('files');
         return redirect()->back();
